@@ -24,13 +24,13 @@ repository               : "davidecollato/davidecollato.github.io"
 author:
   # Biographic information
   avatar           : "profile.png"
-  name             : "Your Sidebar Name"
+  name             : "Davide Collato"
   pronouns         : # example: "she/her"  
-  bio              : "Short biography for the left-hand sidebar"
-  location         : "Earth"
-  employer         : "Red Brick University"
+  bio              : "PhD Student in Mathematical Sciences"
+  location         : "Italy"
+  employer         : "Politecnico di Torino"
   uri              : # URL
-  email            : "none@example.org" 
+  email            : "davide.collato@polito.it" 
 
   # Academic websites
   academia         : # URL
