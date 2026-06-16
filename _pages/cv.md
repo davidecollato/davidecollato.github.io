@@ -7,9 +7,6 @@ redirect_from:
   - /resume
 ---
 
-Short CV
-===
-
 ## Education
 - **PhD in Mathematical Sciences**, Politecnico di Torino
   - Advisors: Silvia Falletta, Letizia Scuderi
