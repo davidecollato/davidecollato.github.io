@@ -19,7 +19,7 @@ Hi! My name is Davide Collato, I'm a PhD student in Mathematical Sciences at [Po
 ## Numerical Simulations
 
 <div class="slideshow">
-  <img id="slide" src="" style="width:100%; border-radius:8px;">
+  <img id="slide" src="/images/hal_real_kappa10.png" style="width:100%; border-radius:8px;">
   <p id="caption" style="text-align:center; font-style:italic;"></p>
   <div style="text-align:center; margin-top:8px;">
     <button onclick="prevSlide()">&#8592;</button>
