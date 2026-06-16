@@ -20,21 +20,19 @@ Hi! My name is Davide Collato, I'm a PhD student in Mathematical Sciences at [Po
 
 <div class="sim-wrapper">
 
-  <!-- Viewport scorrevole -->
   <div class="sim-track-outer">
     <div class="sim-track" id="simTrack">
-      <div class="sim-slide">
+      <div class="sim-slide active">
         <img src="/images/slideshow/half_real_kappa10.png" alt="Simulation 1">
-        <div class="sim-caption">Descrizione simulazione 1</div>
+        <div class="sim-caption">VEM-BEM coupling in 3D</div>
       </div>
       <div class="sim-slide">
         <img src="/images/slideshow/pikachu_finenothresh.gif" alt="Simulation 2">
-        <div class="sim-caption">Descrizione simulazione 2</div>
+        <div class="sim-caption">Sound-soft acoustic scattering by a Pikachu obstacle</div>
       </div>
     </div>
   </div>
 
-  <!-- Controlli centrati sotto -->
   <div class="sim-controls">
     <a class="sim-btn" onclick="changeSlide(-1)">&#10094;</a>
     <span class="sim-dot active" onclick="goToSlide(0)"></span>
@@ -50,17 +48,19 @@ Hi! My name is Davide Collato, I'm a PhD student in Mathematical Sciences at [Po
   margin: 1.5em auto;
 }
 .sim-track-outer {
-  overflow: hidden;
   border-radius: 6px;
   box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  overflow: hidden;
 }
 .sim-track {
-  display: flex;
-  transition: transform 0.5s ease-in-out;
+  position: relative;
 }
 .sim-slide {
-  min-width: 100%;
-  box-sizing: border-box;
+  display: none;
+  animation: simSlideIn 0.5s ease-in-out;
+}
+.sim-slide.active {
+  display: block;
 }
 .sim-slide img {
   width: 100%;
@@ -70,8 +70,12 @@ Hi! My name is Davide Collato, I'm a PhD student in Mathematical Sciences at [Po
   text-align: center;
   font-size: 0.9em;
   color: #555;
-  padding: 8px 0 4px;
+  padding: 8px 0 6px;
   background: white;
+}
+@keyframes simSlideIn {
+  from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
 }
 .sim-controls {
   display: flex;
@@ -105,14 +109,26 @@ Hi! My name is Davide Collato, I'm a PhD student in Mathematical Sciences at [Po
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   let idx = 0;
-  const track = document.getElementById('simTrack');
+  let direction = 1;
+  const slides = document.querySelectorAll('.sim-slide');
   const dots = document.querySelectorAll('.sim-dot');
-  const total = dots.length;
+  const total = slides.length;
 
   function showSlide(n) {
+    direction = n > idx ? 1 : -1;
+    slides[idx].classList.remove('active');
+    dots[idx].classList.remove('active');
     idx = (n + total) % total;
-    track.style.transform = `translateX(-${idx * 100}%)`;
-    dots.forEach(d => d.classList.remove('active'));
+
+    // Animazione direzione
+    slides[idx].style.animation = 'none';
+    slides[idx].offsetHeight; // reflow
+    const keyframe = direction > 0
+      ? 'simSlideIn 0.5s ease-in-out'
+      : 'simSlideInLeft 0.5s ease-in-out';
+    slides[idx].style.animation = keyframe;
+
+    slides[idx].classList.add('active');
     dots[idx].classList.add('active');
   }
 
