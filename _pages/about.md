@@ -21,7 +21,11 @@ Hi! My name is Davide Collato, I'm a PhD student in Mathematical Sciences at [Po
 <!-- Slideshow simulazioni -->
 <div class="slideshow-container">
   <div class="slide fade">
-    <img src="/images/half_real_kappa10.png" alt="Simulation 1">
+    <img src="/images/slideshow/half_real_kappa10.png" alt="Simulation 1">
+    <div class="caption">Descrizione simulazione 1</div>
+  </div>
+  <div class="slide fade">
+    <img src="/images/slideshow/pikachu_finenothresh.gif" alt="Simulation 1">
     <div class="caption">Descrizione simulazione 1</div>
   </div>
 
