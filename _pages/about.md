@@ -19,10 +19,9 @@ Hi! My name is Davide Collato, I'm a PhD student in Mathematical Sciences at [Po
 ## Numerical Simulations
 
 <div class="sim-wrapper">
-
   <div class="sim-track-outer">
     <div class="sim-track" id="simTrack">
-      <div class="sim-slide active">
+      <div class="sim-slide sim-slide--active">
         <img src="/images/slideshow/half_real_kappa10.png" alt="Simulation 1">
         <div class="sim-caption">VEM-BEM coupling in 3D</div>
       </div>
@@ -32,14 +31,12 @@ Hi! My name is Davide Collato, I'm a PhD student in Mathematical Sciences at [Po
       </div>
     </div>
   </div>
-
   <div class="sim-controls">
     <a class="sim-btn" onclick="changeSlide(-1)">&#10094;</a>
-    <span class="sim-dot active" onclick="goToSlide(0)"></span>
+    <span class="sim-dot sim-dot--active" onclick="goToSlide(0)"></span>
     <span class="sim-dot" onclick="goToSlide(1)"></span>
     <a class="sim-btn" onclick="changeSlide(1)">&#10095;</a>
   </div>
-
 </div>
 
 <style>
@@ -52,15 +49,11 @@ Hi! My name is Davide Collato, I'm a PhD student in Mathematical Sciences at [Po
   box-shadow: 0 2px 12px rgba(0,0,0,0.15);
   overflow: hidden;
 }
-.sim-track {
-  position: relative;
-}
-.sim-slide {
-  display: none;
-  animation: simSlideIn 0.5s ease-in-out;
-}
-.sim-slide.active {
+.sim-track { position: relative; }
+.sim-slide { display: none; }
+.sim-slide--active {
   display: block;
+  animation: simSlideIn 0.5s ease-in-out;
 }
 .sim-slide img {
   width: 100%;
@@ -75,6 +68,10 @@ Hi! My name is Davide Collato, I'm a PhD student in Mathematical Sciences at [Po
 }
 @keyframes simSlideIn {
   from { opacity: 0; transform: translateX(40px); }
+  to   { opacity: 1; transform: translateX(0); }
+}
+@keyframes simSlideInLeft {
+  from { opacity: 0; transform: translateX(-40px); }
   to   { opacity: 1; transform: translateX(0); }
 }
 .sim-controls {
@@ -103,33 +100,30 @@ Hi! My name is Davide Collato, I'm a PhD student in Mathematical Sciences at [Po
   cursor: pointer;
   transition: background 0.3s;
 }
-.sim-dot.active { background: #555; }
+.sim-dot--active { background: #555; }
 </style>
 
 <script>
 document.addEventListener('DOMContentLoaded', function () {
   let idx = 0;
-  let direction = 1;
   const slides = document.querySelectorAll('.sim-slide');
   const dots = document.querySelectorAll('.sim-dot');
   const total = slides.length;
 
   function showSlide(n) {
-    direction = n > idx ? 1 : -1;
-    slides[idx].classList.remove('active');
-    dots[idx].classList.remove('active');
+    const direction = n > idx ? 1 : -1;
+    slides[idx].classList.remove('sim-slide--active');
+    dots[idx].classList.remove('sim-dot--active');
     idx = (n + total) % total;
 
-    // Animazione direzione
     slides[idx].style.animation = 'none';
     slides[idx].offsetHeight; // reflow
-    const keyframe = direction > 0
+    slides[idx].style.animation = direction > 0
       ? 'simSlideIn 0.5s ease-in-out'
       : 'simSlideInLeft 0.5s ease-in-out';
-    slides[idx].style.animation = keyframe;
 
-    slides[idx].classList.add('active');
-    dots[idx].classList.add('active');
+    slides[idx].classList.add('sim-slide--active');
+    dots[idx].classList.add('sim-dot--active');
   }
 
   window.changeSlide = dir => showSlide(idx + dir);
