@@ -32,10 +32,10 @@ Hi! My name is Davide Collato, I'm a PhD student in Mathematical Sciences at [Po
     </div>
   </div>
   <div class="sim-controls">
-    <a class="sim-btn" onclick="changeSlide(-1)">&#10094;</a>
-    <span class="sim-dot sim-dot--active" onclick="goToSlide(0)"></span>
-    <span class="sim-dot" onclick="goToSlide(1)"></span>
-    <a class="sim-btn" onclick="changeSlide(1)">&#10095;</a>
+    <a class="sim-btn" id="simPrev">&#10094;</a>
+    <span class="sim-dot sim-dot--active" data-index="0"></span>
+    <span class="sim-dot" data-index="1"></span>
+    <a class="sim-btn" id="simNext">&#10095;</a>
   </div>
 </div>
 
@@ -104,31 +104,50 @@ Hi! My name is Davide Collato, I'm a PhD student in Mathematical Sciences at [Po
 </style>
 
 <script>
-document.addEventListener('DOMContentLoaded', function () {
-  let idx = 0;
-  const slides = document.querySelectorAll('.sim-slide');
-  const dots = document.querySelectorAll('.sim-dot');
-  const total = slides.length;
+(function () {
+  function initSlideshow() {
+    var idx = 0;
+    var slides = document.querySelectorAll('.sim-slide');
+    var dots = document.querySelectorAll('.sim-dot');
+    var total = slides.length;
 
-  function showSlide(n) {
-    const direction = n > idx ? 1 : -1;
-    slides[idx].classList.remove('sim-slide--active');
-    dots[idx].classList.remove('sim-dot--active');
-    idx = (n + total) % total;
+    if (!slides.length) return;
 
-    slides[idx].style.animation = 'none';
-    slides[idx].offsetHeight; // reflow
-    slides[idx].style.animation = direction > 0
-      ? 'simSlideIn 0.5s ease-in-out'
-      : 'simSlideInLeft 0.5s ease-in-out';
+    function showSlide(n) {
+      var direction = n > idx ? 1 : -1;
+      slides[idx].classList.remove('sim-slide--active');
+      dots[idx].classList.remove('sim-dot--active');
+      idx = ((n % total) + total) % total;
 
-    slides[idx].classList.add('sim-slide--active');
-    dots[idx].classList.add('sim-dot--active');
+      slides[idx].style.animation = 'none';
+      slides[idx].offsetHeight;
+      slides[idx].style.animation = direction > 0
+        ? 'simSlideIn 0.5s ease-in-out'
+        : 'simSlideInLeft 0.5s ease-in-out';
+
+      slides[idx].classList.add('sim-slide--active');
+      dots[idx].classList.add('sim-dot--active');
+    }
+
+    document.getElementById('simPrev').addEventListener('click', function () {
+      showSlide(idx - 1);
+    });
+    document.getElementById('simNext').addEventListener('click', function () {
+      showSlide(idx + 1);
+    });
+    dots.forEach(function (dot) {
+      dot.addEventListener('click', function () {
+        showSlide(parseInt(dot.getAttribute('data-index'), 10));
+      });
+    });
+
+    setInterval(function () { showSlide(idx + 1); }, 4000);
   }
 
-  window.changeSlide = dir => showSlide(idx + dir);
-  window.goToSlide = n => showSlide(n);
-
-  setInterval(() => showSlide(idx + 1), 4000);
-});
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initSlideshow);
+  } else {
+    initSlideshow();
+  }
+})();
 </script>
