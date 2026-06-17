@@ -140,8 +140,7 @@ Hi! My name is Davide Collato, I'm a PhD student in Mathematical Sciences at [Po
         showSlide(parseInt(dot.getAttribute('data-index'), 10));
       });
     });
-
-    setInterval(function () { showSlide(idx + 1); }, 4000);
+    
   }
 
   if (document.readyState === 'loading') {
