@@ -57,37 +57,7 @@
     {% endunless %}
     
     {% if post.citation %}
-      <p>Recommended citation: {{ post.citation }}
-      {% unless page.permalink == '/publications/' %}
-        <br />
-        {% if post.paperurl and post.slidesurl and post.bibtexurl %}
-          <a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.slidesurl }}">Download Slides</a> | <a href="{{ post.bibtexurl }}">Download Bibtex</a>
-        {% elsif post.paperurl and post.slidesurl %}
-          <a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.slidesurl }}">Download Slides</a>
-        {% elsif post.paperurl and post.bibtexurl %}
-          <a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.bibtexurl }}">Download Bibtex</a>
-        {% elsif post.paperurl %}
-          <a href="{{ post.paperurl }}">Download Paper</a>
-        {% elsif post.slidesurl and post.bibtexurl %}
-          <a href="{{ post.slidesurl }}">Download Slides</a> | <a href="{{ post.bibtexurl }}">Download Bibtex</a>
-        {% elsif post.slidesurl %}
-          <a href="{{ post.slidesurl }}">Download Slides</a>
-        {% elsif post.bibtexurl %}
-          <a href="{{ post.bibtexurl }}">Download Bibtex</a>
-        {% endif %}
-      {% endunless %}
-      </p>
-    {% elsif post.paperurl or post.slidesurl or post.bibtexurl %}
-      {% unless page.permalink == '/publications/' %}
-      <p>
-        {% if post.paperurl and post.bibtexurl %}<a href="{{ post.paperurl }}">Download Paper</a> | <a href="{{ post.bibtexurl }}">Download Bibtex</a>
-        {% elsif post.paperurl %}<a href="{{ post.paperurl }}">Download Paper</a>
-        {% elsif post.slidesurl and post.bibtexurl %}<a href="{{ post.slidesurl }}">Download Slides</a> | <a href="{{ post.bibtexurl }}">Download Bibtex</a>
-        {% elsif post.slidesurl %}<a href="{{ post.slidesurl }}">Download Slides</a>
-        {% elsif post.bibtexurl %}<a href="{{ post.bibtexurl }}">Download Bibtex</a>
-        {% endif %}
-      </p>
-      {% endunless %}
+      <p>Recommended citation: {{ post.citation }}</p>
     {% endif %}
 
   </article>
