@@ -11,4 +11,4 @@ location: "Pisa, Italy"
 Talk at [GIMC SIMAI Young 2026](https://events.dm.unipi.it/event/331/),
 Università di Pisa, Italy. June 3–5, 2026.
 
-<!-- [Scarica le slide](/files/slides-gimc-2026.pdf) -->
+You can download the slides [here](/files/slides-gimc-2026.pdf).
