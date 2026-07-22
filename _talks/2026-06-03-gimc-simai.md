@@ -4,7 +4,7 @@ collection: talks
 type: "Conference talk"
 permalink: /talks/2026-06-03-gimc-simai
 venue: "GIMC SIMAI Young 2026, Università di Pisa"
-date: 2026-06-03
+date: 2026-06-04
 location: "Pisa, Italy"
 slides: /files/slides-gimc-2026.pdf
 ---
