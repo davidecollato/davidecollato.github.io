@@ -7,14 +7,21 @@ redirect_from:
   - /about.html
 ---
 
-Hi! My name is Davide Collato, I'm a PhD student in Mathematical Sciences at [Politecnico di Torino](https://www.polito.it/).
+Hi! My name is Davide Collato, and I am a PhD student in Mathematical Sciences at [Politecnico di Torino](https://www.polito.it/), within the Department of Mathematical Sciences "G. L. Lagrange" (DISMA). I work under the supervision of Prof. Silvia Falletta and Prof. Letizia Scuderi on the project *Advanced numerical methods for wave propagation problems*.
+
+My research lies in **numerical analysis**: I design and study efficient, accurate methods to simulate how **acoustic waves propagate and scatter** when they hit an obstacle. To do this I reformulate the problem in terms of **boundary integral equations** and combine the **Boundary Element Method (BEM)** with the **Virtual Element Method (VEM)** — an approach that can handle complex geometries and general polytopal meshes while keeping the computational cost under control.
+
+Before joining Politecnico di Torino, I earned my MSc in Mathematics *cum laude* (2024) and my BSc in Mathematics (2022) at the University of Milano-Bicocca. During my PhD I have carried out research abroad — most recently as a visiting researcher at [ONERA](https://www.onera.fr/en) in Toulouse, France — and I regularly present my work at international conferences and summer schools. Alongside my research, I teach at Politecnico di Torino, currently as a lecturer and teaching assistant for the Numerical Linear Algebra module of *Algebra Lineare e Geometria* (BSc in Aerospace Engineering).
+
+You can find the details in my [CV](/cv/), or get in touch with me by [email](mailto:davide.collato@polito.it).
 
 ## Research Interests
 
 - Numerical approximation of integral equations
-- Boundary Integral Equations and Boundary Element Method (BEM)
-- Coupling between Virtual Element Method (VEM) and BEM
-- Partial Differential Equations and their approximation
+- Boundary Integral Equations and the Boundary Element Method (BEM)
+- Coupling between the Virtual Element Method (VEM) and BEM
+- Wave propagation and acoustic scattering problems
+- Partial Differential Equations and their numerical approximation
 
 ## Numerical Simulations
 
