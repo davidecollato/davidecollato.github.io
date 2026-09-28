@@ -38,7 +38,7 @@ You can find the details in my [CV](/cv/), or get in touch with me by [email](ma
       </div>
       <div class="sim-slide">
         <img src="/images/slideshow/scattering_soft_hard.gif" alt="Simulation 3">
-        <div class="sim-caption">Sound-hard (left) vs sound-soft (right) acoustic scattering by a disk</div>
+        <div class="sim-caption">Acoustic scattering by a disk: sound-soft vs sound-hard obstacle</div>
       </div>
     </div>
   </div>
