@@ -36,12 +36,17 @@ You can find the details in my [CV](/cv/), or get in touch with me by [email](ma
         <img src="/images/slideshow/pikachu_finenothresh.gif" alt="Simulation 2">
         <div class="sim-caption">Sound-soft acoustic scattering by a Pikachu obstacle</div>
       </div>
+      <div class="sim-slide">
+        <img src="/images/slideshow/scattering_soft_hard.gif" alt="Simulation 3">
+        <div class="sim-caption">Sound-hard (left) vs sound-soft (right) acoustic scattering by a disk</div>
+      </div>
     </div>
   </div>
   <div class="sim-controls">
     <a class="sim-btn" id="simPrev">&#10094;</a>
     <span class="sim-dot sim-dot--active" data-index="0"></span>
     <span class="sim-dot" data-index="1"></span>
+    <span class="sim-dot" data-index="2"></span>
     <a class="sim-btn" id="simNext">&#10095;</a>
   </div>
 </div>
