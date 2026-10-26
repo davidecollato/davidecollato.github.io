@@ -1,0 +1,41 @@
+# News shown on the homepage (_includes/news.html).
+# Items are sorted by date automatically, so the order here does not matter.
+# `text` accepts Markdown; keep it in double quotes (a ": " inside would break YAML).
+# Items dated in the future get an "Upcoming" badge.
+
+- date: 2027-07-05
+  text: "Invited to speak at **ICOSAHOM 2027**, Politecnico di Milano."
+
+- date: 2026-09-16
+  text: "Invited talk at **YAMC 2026** in Turin on virtual element approximations of boundary integral operators.
+    [Details](/talks/2026-09-16-YAMC) · [Slides](/files/slides-YAMC-2026.pdf)"
+
+- date: 2026-07-21
+  text: "Invited talk at **IMSE 2026** in Matera on 3D exterior Helmholtz problems via VEM/BEM coupling.
+    [Details](/talks/2026-07-20-IMSE) · [Slides](/files/slides-IMSE-2026.pdf)"
+
+- date: 2026-06-04
+  text: "Talk at **GIMC SIMAI Young 2026** in Pisa on VEM/BEM coupling for 3D acoustic scattering.
+    [Details](/talks/2026-06-03-gimc-simai) · [Slides](/files/slides-gimc-2026.pdf)"
+
+- date: 2025-12-29
+  text: "New preprint: [*CQ-collocation BEMs for 3D sound-hard scattering problems*](/publications/29-12-2025-CQ-BEM/), with S. Falletta, G. Monegato and L. Scuderi."
+
+- date: 2025-12-04
+  text: "Invited talk at the **PhD Day** of Politecnico di Torino.
+    [Details](/talks/2025-12-04-phd-day)"
+
+- date: 2025-11-07
+  text: "Started a three-month research visit at **ONERA** in Toulouse, France, with S. Pernet and E. Arcese."
+
+- date: 2025-10-13
+  text: "Research visit at the **University of Messina**, with Prof. L. Desiderio."
+
+- date: 2025-08-25
+  text: "Poster at the summer school *Waves: Modeling, Analysis, and Numerics* in Nijmegen, The Netherlands."
+
+- date: 2024-11-01
+  text: "Started my PhD in Mathematical Sciences at **Politecnico di Torino**."
+
+- date: 2024-09-20
+  text: "MSc in Mathematics *cum laude* at the University of Milano-Bicocca."

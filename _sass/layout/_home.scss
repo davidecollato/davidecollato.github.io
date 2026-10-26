@@ -1,0 +1,178 @@
+/* ==========================================================================
+   Homepage: animated hero banner and news list
+   ========================================================================== */
+
+/* Hero */
+
+.home-hero {
+  position: relative;
+  aspect-ratio: 3 / 1;
+  min-height: 220px;
+  margin: 0 0 1.75em;
+  border-radius: 8px;
+  overflow: hidden;
+  background: #14161f;
+  box-shadow: 0 2px 14px rgba(0, 0, 0, 0.18);
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(90deg, rgba(10, 12, 24, 0.82) 0%, rgba(10, 12, 24, 0.6) 38%, rgba(10, 12, 24, 0) 62%);
+    pointer-events: none;
+  }
+}
+
+.home-hero__canvas {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 62.5% 50%;
+  display: block;
+  /* static frame, visible until the script draws (or without JS / with reduced motion) */
+  background: #21918c url("../../images/hero/poster.webp") 62.5% 50% / cover no-repeat;
+}
+
+.home-hero__text {
+  position: absolute;
+  z-index: 1;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  max-width: 52%;
+  padding: 0 1.6em;
+  color: #fff;
+  text-shadow: 0 1px 6px rgba(0, 0, 0, 0.45);
+}
+
+.home-hero__kicker {
+  margin: 0 0 0.35em;
+  font-size: 0.68em;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.85;
+}
+
+.home-hero__title {
+  margin: 0 0 0.35em;
+  font-size: 1.55em;
+  font-weight: 700;
+  line-height: 1.15;
+}
+
+.home-hero__subtitle {
+  margin: 0;
+  font-size: 0.82em;
+  line-height: 1.4;
+  opacity: 0.92;
+}
+
+.home-hero__caption {
+  position: absolute;
+  z-index: 1;
+  right: 0.8em;
+  bottom: 0.55em;
+  margin: 0;
+  font-size: 0.62em;
+  white-space: nowrap;
+  color: rgba(255, 255, 255, 0.85);
+  text-shadow: 0 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+@include breakpoint(max-width $small) {
+  /* stack: animation on top, text below, so the obstacle never sits under the title */
+  .home-hero {
+    display: flex;
+    flex-direction: column;
+    aspect-ratio: auto;
+    min-height: 0;
+
+    &::after {
+      display: none;
+    }
+  }
+
+  .home-hero__canvas {
+    position: relative;
+    height: auto;
+    aspect-ratio: 2 / 1;
+  }
+
+  .home-hero__text {
+    position: static;
+    transform: none;
+    max-width: none;
+    padding: 0.9em 1em 1.1em;
+  }
+
+  .home-hero__title {
+    font-size: 1.3em;
+  }
+
+  .home-hero__caption {
+    top: 0.55em;
+    bottom: auto;
+  }
+}
+
+/* News */
+
+.news {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.news__item {
+  display: grid;
+  grid-template-columns: 5.2em 1fr;
+  gap: 0.9em;
+  margin: 0;
+  padding: 0.55em 0;
+  border-bottom: 1px solid var(--global-border-color);
+  font-size: 0.92em;
+  line-height: 1.5;
+
+  &:last-child {
+    border-bottom: none;
+  }
+}
+
+.news__date {
+  padding-top: 0.12em;
+  font-size: 0.85em;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+  color: var(--global-text-color-light);
+}
+
+.news__badge {
+  display: inline-block;
+  margin-right: 0.45em;
+  padding: 0.05em 0.6em;
+  border-radius: 999px;
+  font-size: 0.72em;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  vertical-align: 0.12em;
+  color: #fff;
+  background: var(--global-base-color);
+}
+
+.news__more {
+  margin-top: 0.4em;
+
+  > summary {
+    cursor: pointer;
+    font-size: 0.85em;
+    color: var(--global-link-color);
+  }
+
+  .news__item:first-child {
+    border-top: 1px solid var(--global-border-color);
+  }
+}

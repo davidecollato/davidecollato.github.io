@@ -1,0 +1,25 @@
+{% comment %}
+  Homepage news list, fed by _data/news.yml.
+  Usage: {% include news.html limit=5 %}  (older items go in a collapsible block)
+{% endcomment %}
+{% assign news_limit = include.limit | default: 5 %}
+{% assign news_items = site.data.news | sort: "date" | reverse %}
+{% assign news_now = site.time | date: "%s" | plus: 0 %}
+
+{% capture news_rows %}{% for item in news_items %}{% assign item_time = item.date | date: "%s" | plus: 0 %}
+  <li class="news__item">
+    <time class="news__date" datetime="{{ item.date | date: '%Y-%m-%d' }}">{{ item.date | date: "%b %Y" }}</time>
+    <div class="news__text">
+      {% if item_time > news_now %}<span class="news__badge">Upcoming</span>{% endif %}
+      {{ item.text | markdownify | remove: "<p>" | remove: "</p>" }}
+    </div>
+  </li>{% if forloop.index == news_limit and forloop.last == false %}<!--split-->{% endif %}{% endfor %}{% endcapture %}
+{% assign news_parts = news_rows | split: "<!--split-->" %}
+
+<ul class="news">{{ news_parts[0] }}</ul>
+{% if news_parts.size > 1 %}
+<details class="news__more">
+  <summary>Older news</summary>
+  <ul class="news">{{ news_parts[1] }}</ul>
+</details>
+{% endif %}

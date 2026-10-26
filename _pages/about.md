@@ -1,19 +1,35 @@
 ---
 permalink: /
 title: "About me"
+hide_title: true
 author_profile: true
 redirect_from: 
   - /about/
   - /about.html
 ---
 
-Hi! My name is Davide Collato, and I am a PhD student in Mathematical Sciences at [Politecnico di Torino](https://www.polito.it/), within the Department of Mathematical Sciences "G. L. Lagrange" (DISMA). I work under the supervision of Prof. Silvia Falletta and Prof. Letizia Scuderi on the project *Advanced numerical methods for wave propagation problems*.
+<div class="home-hero">
+  <canvas id="hero-waves" class="home-hero__canvas" width="960" height="320"
+          data-field="/images/hero/field.png" data-cx="0.625" data-cy="0.5" data-r="0.0833"
+          role="img" aria-label="Animation of a plane acoustic wave scattered by a sound-soft disk"></canvas>
+  <div class="home-hero__text">
+    <div class="home-hero__kicker">Numerical analysis · Wave propagation</div>
+    <div class="home-hero__title">Simulating how waves scatter</div>
+    <div class="home-hero__subtitle">Boundary integral equations, BEM and VEM/BEM coupling for acoustic scattering problems.</div>
+  </div>
+  <div class="home-hero__caption">Exact solution: plane wave hitting a sound-soft disk</div>
+</div>
+<script src="/assets/js/hero-waves.js" defer></script>
 
-My research lies in **numerical analysis**: I design and study efficient, accurate methods to simulate how **acoustic waves propagate and scatter** when they hit an obstacle. To do this I reformulate the problem in terms of **boundary integral equations** and combine the **Boundary Element Method (BEM)** with the **Virtual Element Method (VEM)** — an approach that can handle complex geometries and general polytopal meshes while keeping the computational cost under control.
+Hi! I'm Davide Collato, a PhD student in Mathematical Sciences at [Politecnico di Torino](https://www.polito.it/) (Department of Mathematical Sciences "G. L. Lagrange"), where I work with Prof. Silvia Falletta and Prof. Letizia Scuderi on *Advanced numerical methods for wave propagation problems*.
 
-Before joining Politecnico di Torino, I earned my MSc in Mathematics *cum laude* (2024) and my BSc in Mathematics (2022) at the University of Milano-Bicocca. During my PhD I have carried out research abroad — most recently as a visiting researcher at [ONERA](https://www.onera.fr/en) in Toulouse, France — and I regularly present my work at international conferences and summer schools. Alongside my research, I teach at Politecnico di Torino, currently as a lecturer and teaching assistant for the Numerical Linear Algebra module of *Algebra Lineare e Geometria* (BSc in Aerospace Engineering).
+I design and analyse numerical methods to simulate how **acoustic waves propagate and scatter** around obstacles. My main tools are **boundary integral equations** and the **Boundary Element Method (BEM)**, which I couple with the **Virtual Element Method (VEM)** to handle complex geometries and general polytopal meshes while keeping the computational cost under control.
 
-You can find the details in my [CV](/cv/), or get in touch with me by [email](mailto:davide.collato@polito.it).
+I earned my MSc in Mathematics *cum laude* (2024) and my BSc (2022) at the University of Milano-Bicocca. During my PhD I have been a visiting researcher at [ONERA](https://www.onera.fr/en) in Toulouse, and I teach Numerical Linear Algebra for the BSc in Aerospace Engineering at Politecnico di Torino. More in my [CV](/cv/), or get in touch by [email](mailto:davide.collato@polito.it).
+
+## News
+
+{% include news.html limit=5 %}
 
 ## Research Interests
 
@@ -74,9 +90,9 @@ You can find the details in my [CV](/cv/), or get in touch with me by [email](ma
 .sim-caption {
   text-align: center;
   font-size: 0.9em;
-  color: #555;
+  color: var(--global-text-color-light);
   padding: 8px 0 6px;
-  background: white;
+  background: var(--global-bg-color);
 }
 @keyframes simSlideIn {
   from { opacity: 0; transform: translateX(40px); }
