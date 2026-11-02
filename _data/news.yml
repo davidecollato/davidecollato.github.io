@@ -14,24 +14,25 @@
   text: "Invited talk at **YAMC 2026** in Turin on virtual element approximations of boundary integral operators,
     in the minisymposium *Advances in Numerical Integration and Discretization of Integral Equations*,
     organized by B. Degli Esposti and L. Coppolino.
-    [Details](/talks/2026-09-16-YAMC) · [Slides](/files/slides-YAMC-2026.pdf)"
+    [Slides](/files/slides-YAMC-2026.pdf)"
 
 - date: 2026-07-21
-  text: "Invited talk at **IMSE 2026** in Matera on 3D exterior Helmholtz problems via VEM/BEM coupling.
-    [Details](/talks/2026-07-20-IMSE) · [Slides](/files/slides-IMSE-2026.pdf)"
+  text: "Invited talk at **IMSE 2026** in Matera on 3D exterior Helmholtz problems via VEM/BEM coupling,
+    in the special session *Advanced numerical methods for integral equations*,
+    organized by A. Aimi, C. Laurita and C. Guardasoni.
+    [Slides](/files/slides-IMSE-2026.pdf)"
 
 - date: 2026-06-04
   text: "Talk at **GIMC SIMAI Young 2026** in Pisa on VEM/BEM coupling for 3D acoustic scattering,
     in the minisymposium *Advanced FEM Techniques with Engineering Applications*,
     organized by L. Lottici and P. Fisicaro.
-    [Details](/talks/2026-06-03-gimc-simai) · [Slides](/files/slides-gimc-2026.pdf)"
+    [Slides](/files/slides-gimc-2026.pdf)"
 
 - date: 2025-12-29
   text: "New preprint: [*CQ-collocation BEMs for 3D sound-hard scattering problems*](/publications/29-12-2025-CQ-BEM/), with S. Falletta, G. Monegato and L. Scuderi."
 
 - date: 2025-12-04
-  text: "Invited talk at the **PhD Day** of Politecnico di Torino.
-    [Details](/talks/2025-12-04-phd-day)"
+  text: "Invited talk at the **PhD Day** of Politecnico di Torino."
 
 - date: 2025-11-07
   text: "Started a three-month research visit at **ONERA** in Toulouse, France, with S. Pernet and E. Arcese."
