@@ -11,3 +11,6 @@ slides: /files/slides-gimc-2026.pdf
 
 Talk at [GIMC SIMAI Young 2026](https://events.dm.unipi.it/event/331/),
 Università di Pisa, Italy. June 3–5, 2026.
+
+Part of the minisymposium *Advanced FEM Techniques with Engineering Applications*,
+organized by L. Lottici and P. Fisicaro.

@@ -4,10 +4,16 @@
 # Items dated in the future get an "Upcoming" badge.
 
 - date: 2027-07-05
-  text: "Invited to speak at **ICOSAHOM 2027**, Politecnico di Milano."
+  text: "Invited to speak at **ICOSAHOM 2027**, Politecnico di Milano, in the minisymposium
+    *High-Order Methods for PDEs: Perspectives from Young Researchers*, organized by F. Credali and G. Teora."
+
+- date: 2027-03-24
+  text: "Invited by the organizers to take part in **JOSO 2027** (Journées Ondes Sud-Ouest) at CEA CESTA, Bordeaux, France."
 
 - date: 2026-09-16
-  text: "Invited talk at **YAMC 2026** in Turin on virtual element approximations of boundary integral operators.
+  text: "Invited talk at **YAMC 2026** in Turin on virtual element approximations of boundary integral operators,
+    in the minisymposium *Advances in Numerical Integration and Discretization of Integral Equations*,
+    organized by B. Degli Esposti and L. Coppolino.
     [Details](/talks/2026-09-16-YAMC) · [Slides](/files/slides-YAMC-2026.pdf)"
 
 - date: 2026-07-21
@@ -15,7 +21,9 @@
     [Details](/talks/2026-07-20-IMSE) · [Slides](/files/slides-IMSE-2026.pdf)"
 
 - date: 2026-06-04
-  text: "Talk at **GIMC SIMAI Young 2026** in Pisa on VEM/BEM coupling for 3D acoustic scattering.
+  text: "Talk at **GIMC SIMAI Young 2026** in Pisa on VEM/BEM coupling for 3D acoustic scattering,
+    in the minisymposium *Advanced FEM Techniques with Engineering Applications*,
+    organized by L. Lottici and P. Fisicaro.
     [Details](/talks/2026-06-03-gimc-simai) · [Slides](/files/slides-gimc-2026.pdf)"
 
 - date: 2025-12-29
