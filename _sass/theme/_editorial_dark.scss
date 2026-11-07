@@ -1,0 +1,26 @@
+/* ==========================================================================
+    EDITORIAL THEME - DARK VERSION
+    Warm dark "night paper" with a lighter teal accent.
+    ========================================================================== */
+
+$primary-color              : #5cbfb8;
+
+/* Editorial dark theme for the site */
+html[data-theme="dark"] {
+    --global-base-color                 : #{$primary-color};
+    --global-bg-color                   : #1e1c19;
+    --global-footer-bg-color            : #191714;
+    --global-border-color               : #3a362f;
+    --global-dark-border-color          : #4a453c;
+    --global-code-background-color      : #2a2723;
+    --global-code-text-color            : #e9e4da;
+    --global-fig-caption-color          : #a39b8c;
+    --global-link-color                 : #{$primary-color};
+    --global-link-color-hover           : #8ad6d0;
+    --global-link-color-visited         : #{$primary-color};
+    --global-masthead-link-color        : #e9e4da;
+    --global-masthead-link-color-hover  : #{$primary-color};
+    --global-text-color                 : #e9e4da;
+    --global-text-color-light           : #a39b8c;
+    --global-thead-color                : #2a2723;
+}

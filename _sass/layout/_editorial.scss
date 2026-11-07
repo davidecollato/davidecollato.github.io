@@ -1,0 +1,148 @@
+/* ==========================================================================
+   Editorial touches: monogram, small-caps navigation, wave under section
+   headings, framed hero and portrait. Colours come from the theme variables,
+   so everything follows the light/dark toggle.
+   ========================================================================== */
+
+$wave-svg: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='132' height='12' viewBox='0 0 132 12'%3E%3Cpath d='M0 6 Q5.5 0 11 6 T22 6 T33 6 T44 6 T55 6 T66 6 T77 6 T88 6 T99 6 T110 6 T121 6 T132 6' fill='none' stroke='%23000' stroke-width='1.3'/%3E%3C/svg%3E";
+
+/* Masthead */
+
+.masthead__menu-item a {
+  font-family: $global-font-family;
+  font-variant: small-caps;
+  letter-spacing: 0.06em;
+}
+
+.masthead__menu-item--lg a {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45em;
+  font-family: $header-font-family;
+  font-variant: normal;
+  letter-spacing: 0;
+  font-size: 1.3em;
+}
+
+.monogram {
+  width: 1.4em;
+  height: 1.4em;
+  flex: none;
+  color: var(--global-base-color);
+
+  text {
+    fill: var(--global-text-color);
+    font-family: $header-font-family;
+  }
+}
+
+/* Section headings (pages and archives such as Publications or CV):
+   no rule, a short wave instead */
+
+.page__content h2:not(.archive__item-title),
+.archive > h2:not(.archive__item-title),
+.archive__subtitle {
+  font-size: 1.65em;
+  font-weight: 500;
+  border-bottom: none;
+  padding-bottom: 0;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 132px;
+    height: 12px;
+    margin-top: 0.15em;
+    background-color: var(--global-base-color);
+    -webkit-mask: url($wave-svg) no-repeat;
+    mask: url($wave-svg) no-repeat;
+  }
+}
+
+/* the wave replaces the rule that publications.html puts after category headings */
+.archive > h2 + hr {
+  display: none;
+}
+
+h1, h2, h3 {
+  font-weight: 500;
+}
+
+/* Titles of publications and talks in the lists */
+
+.archive__item-title {
+  font-family: $header-font-family;
+  font-weight: 500;
+  font-size: 1.3em;
+}
+
+/* Portrait */
+
+img.author__avatar {
+  border: 1px solid var(--global-base-color);
+  padding: 5px;
+  background: var(--global-bg-color);
+}
+
+.sidebar h3.author__name {
+  font-family: $header-font-family;
+  font-size: 1.45em;
+  font-weight: 500;
+}
+
+/* Hero */
+
+.home-hero {
+  border-radius: 2px;
+  box-shadow: none;
+  outline: 1px solid var(--global-border-color);
+  outline-offset: 5px;
+}
+
+.home-hero__title {
+  font-family: $header-font-family;
+  font-size: 2em;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.home-hero__kicker {
+  font-variant: small-caps;
+  text-transform: none;
+  letter-spacing: 0.1em;
+  font-size: 0.8em;
+  font-weight: 400;
+}
+
+/* News */
+
+.news__item {
+  border-bottom-style: dotted;
+}
+
+.news__date {
+  font-variant: small-caps;
+  letter-spacing: 0.04em;
+}
+
+.news__badge {
+  background: transparent;
+  color: var(--global-base-color);
+  border: 1px solid var(--global-base-color);
+  text-transform: none;
+  font-variant: small-caps;
+  letter-spacing: 0.06em;
+  font-weight: 600;
+}
+
+/* Slideshow caption */
+
+.sim-caption {
+  font-style: italic;
+}
+
+@include breakpoint(max-width $small) {
+  .masthead__menu-item--lg a {
+    font-size: 1.05em;
+  }
+}

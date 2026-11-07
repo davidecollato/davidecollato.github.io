@@ -1,0 +1,59 @@
+/* ==========================================================================
+    EDITORIAL THEME - LIGHT VERSION
+    Warm paper background, serif typography, teal accent taken from the
+    viridis colormap used in the simulations.
+    ========================================================================== */
+
+/* Typography (fonts are loaded in _includes/head/custom.html) */
+$global-font-family         : "Source Serif 4", Georgia, serif;
+$header-font-family         : "EB Garamond", Georgia, serif;
+
+/* Color codes used for the theme */
+$primary-color              : #1b7f7a;
+$gray                       : #847c6e;
+$dark-gray                  : mix(#000, $gray, 40%);
+$darker-gray                : mix(#000, $gray, 60%);
+$light-gray                 : mix(#fff, $gray, 50%);
+$lighter-gray               : mix(#fff, $gray, 90%);
+
+$paper                      : #f7f4ee;
+$paper-dark                 : #efe9de;
+$ink                        : #2f2c27;
+$rule                       : #ddd5c6;
+
+/* Color codes used for the site */
+$danger-color               : #c4524e;
+$info-color                 : #1b7f7a;
+$notice-color               : #847c6e;
+$success-color              : #4f8a3c;
+$warning-color              : #c98a1b;
+
+/* Other basic settings for the template */
+$border-radius              : 4px;
+$box-shadow                 : 0 1px 1px rgba(0, 0, 0, 0.125);
+$global-transition          : all 0.2s ease-in-out;
+$masthead-height            : 70px;
+$navicon-width              : 28px;
+$navicon-height             : 4px;
+$sidebar-link-max-width     : 250px;
+$sidebar-screen-min-width   : 1024px;
+
+/* Editorial light theme for the site */
+:root {
+    --global-base-color                 : #{$primary-color};
+    --global-bg-color                   : #{$paper};
+    --global-footer-bg-color            : #{$paper-dark};
+    --global-border-color               : #{$rule};
+    --global-dark-border-color          : #c9c0ae;
+    --global-code-background-color      : #{$paper-dark};
+    --global-code-text-color            : #{$ink};
+    --global-fig-caption-color          : #{$gray};
+    --global-link-color                 : #{$primary-color};
+    --global-link-color-hover           : #135c58;
+    --global-link-color-visited         : #{$primary-color};
+    --global-masthead-link-color        : #3d3932;
+    --global-masthead-link-color-hover  : #{$primary-color};
+    --global-text-color                 : #{$ink};
+    --global-text-color-light           : #{$gray};
+    --global-thead-color                : #ece6da;
+}
